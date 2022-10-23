@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 705738}
   - component: {fileID: 705737}
   - component: {fileID: 705736}
+  - component: {fileID: 705740}
   m_Layer: 0
   m_Name: DrumLeftUGLY
   m_TagString: Untagged
@@ -221,6 +222,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &705740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c723209486f1394f826692150ef191d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drumSFX: {fileID: 0}
+  drum: {fileID: 705735}
 --- !u!1 &69683152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,6 +1190,7 @@ GameObject:
   - component: {fileID: 918010935}
   - component: {fileID: 918010934}
   - component: {fileID: 918010933}
+  - component: {fileID: 918010937}
   m_Layer: 0
   m_Name: DrumRIghtUGLY
   m_TagString: Untagged
@@ -1261,6 +1277,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &918010937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918010932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c723209486f1394f826692150ef191d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drumSFX: {fileID: 0}
+  drum: {fileID: 705735}
 --- !u!1 &1124836446
 GameObject:
   m_ObjectHideFlags: 0
