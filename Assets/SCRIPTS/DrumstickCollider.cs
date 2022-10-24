@@ -6,6 +6,9 @@ public class DrumstickCollider : MonoBehaviour
 {
     public GameObject drumLeft;
     public GameObject drumRight;
+    private AudioSource masterSound;
+    public AudioClip drumRightSFX;
+    public AudioClip drumLeftSFX;
     private int[] patternDesired = new int[] {1,-1,1,1}; //general paradiddle drum pattern
     private int[] patternConducting =  new int[] {0,0,0,0}; //the pattern you make
     private string firstDrumHit = null; //this just defaults a specific drum to be the main drum you hit
@@ -15,7 +18,7 @@ public class DrumstickCollider : MonoBehaviour
 
     void Start()
     {
-
+        masterSound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -25,6 +28,7 @@ public class DrumstickCollider : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
+
         drumNumber++;// move to the next drum in the pattern
         if (!startedNewPattern){
             startedNewPattern = true;
@@ -36,7 +40,15 @@ public class DrumstickCollider : MonoBehaviour
         } else {
             patternConducting[drumNumber] = -1;
         }
-        //Add something here that will play the audio of the specific drum you hit based on the GameObjects and their Audio Managers
+       
+       if (other.gameObject == drumLeft){
+        Debug.Log(gameObject);
+        masterSound.PlayOneShot(drumLeftSFX, 1.5f);
+       }
+       if (other.gameObject == drumRight){
+        Debug.Log(gameObject);
+        masterSound.PlayOneShot(drumRightSFX, 1.5f);
+       }
        
         comparePatterns();
     }
