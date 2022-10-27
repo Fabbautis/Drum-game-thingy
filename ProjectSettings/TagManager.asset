@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Drumstick
+  - Drum
+  - Acquire Info
+  - Display Ghost
   layers:
   - Default
   - TransparentFX
